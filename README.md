@@ -1,1 +1,2 @@
-# prog3-a1-poo-daniel-vieira
+# Nome: Daniel Fernando Vieira
+# Turma: Sistemas de Informação - Campus Chapecó
