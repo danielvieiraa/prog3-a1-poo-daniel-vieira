@@ -1,0 +1,16 @@
+<?php
+    require_once 'classes/Usuario.php';
+    require_once 'classes/Autenticador.php';
+    require_once 'classes/Sessao.php';
+
+    Sessao::iniciar();
+
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $usuario = new Usuario($nome, $email, $senha);
+    Autenticador::registrar($usuario);
+
+    exit;
+?>

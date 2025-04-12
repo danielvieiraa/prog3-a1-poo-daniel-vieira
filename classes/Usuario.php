@@ -5,9 +5,9 @@
         private $senha;
         
         public function __construct($nome, $email, $senha) {
-            $this->nome = $nome;
-            $this->email = $email;
-            $this->senha = $senha;
+            $this->nome = htmlspecialchars($nome);
+            $this->email = filter_var($email, FILTER_SANITIZE_EMAIL);
+            $this->senha = password_hash($senha, PASSWORD_DEFAULT);
         }
         
         public function getNome() {
