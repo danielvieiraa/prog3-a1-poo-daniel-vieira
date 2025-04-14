@@ -12,5 +12,6 @@
     $usuario = new Usuario($nome, $email, $senha);
     Autenticador::registrar($usuario);
 
+    header("Location: login.php");
     exit;
 ?>
